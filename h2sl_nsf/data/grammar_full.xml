@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <grammar>
+        <grammar_terminal symbol="CC" words="and, or"/>
+        <grammar_terminal symbol="CD" words=""/>
+        <grammar_terminal symbol="DT" words="the,these,a,this"/>
+        <grammar_terminal symbol="EX" words="there"/>
+        <grammar_terminal symbol="FW" words=""/>
+        <grammar_terminal symbol="IN" words="near,at,toward,towards,by,for,of,in,from,behind,on,top of"/>
+        <grammar_terminal symbol="JJ" words="red,blue,green,black,white,rough,smooth,small,large,big"/>
+        <grammar_terminal symbol="JJR" words=""/>
+        <grammar_terminal symbol="JJS" words=""/>
+        <grammar_terminal symbol="LS" words=""/>
+        <grammar_terminal symbol="MD" words=""/>
+        <grammar_terminal symbol="NN" words="robot,person,human,worker,table,desk,workspace,room,block,blocks,tray,box,crate,alarm,assembly,assembly line,structure,tower,tool,mallet,hammer,screwdriver,cup,mug,glass,can,inside,outside,left,right,front,back,location"/>
+        <grammar_terminal symbol="NNS" words=""/>
+        <grammar_terminal symbol="NNP" words=""/>
+        <grammar_terminal symbol="NNPS" words=""/>
+        <grammar_terminal symbol="PDT" words=""/>
+        <grammar_terminal symbol="POS" words=""/>
+        <grammar_terminal symbol="PRP" words=""/>
+        <grammar_terminal symbol="PRPD" words=""/>
+        <grammar_terminal symbol="RB" words="slowly,quickly,carefully"/>
+        <grammar_terminal symbol="RBR" words=""/>
+        <grammar_terminal symbol="RBS" words=""/>
+        <grammar_terminal symbol="RP" words="over"/>
+        <grammar_terminal symbol="SYM" words=""/>
+        <grammar_terminal symbol="TO" words="to"/>
+        <grammar_terminal symbol="UH" words=""/>
+        <grammar_terminal symbol="VB" words="grasp,enclose,hold,place,pick,pick up,support,put,keep,connect,attach,join,push,go,approach,follow,proceed,move,construct,assembly,disassemble,finish,start,press alarm,ask,watch,observe,enter,exit,leave"/>
+        <grammar_terminal symbol="VBD" words=""/>
+        <grammar_terminal symbol="VBG" words=""/>
+        <grammar_terminal symbol="VBN" words="left,right"/>
+        <grammar_terminal symbol="VBP" words=""/>
+        <grammar_terminal symbol="VBZ" words="is"/>
+        <grammar_terminal symbol="WDT" words="that"/>
+        <grammar_terminal symbol="WP" words=""/>
+        <grammar_terminal symbol="WPD" words=""/>
+        <grammar_terminal symbol="WRB" words=""/>
+        <grammar_non_terminal root="S" children="NP,VP"/>
+        <grammar_non_terminal root="S" children="ADVP,VP"/>
+        <grammar_non_terminal root="SBAR" children="WHNP,S"/>
+        <grammar_non_terminal root="VP" children="VB,PP"/>
+        <grammar_non_terminal root="VP" children="VB,NP"/>
+        <grammar_non_terminal root="VP" children="VB,X1"/>
+        <grammar_non_terminal root="VP" children="VP,X2"/>
+        <grammar_non_terminal root="VP" children="VB,X3"/>
+        <grammar_non_terminal root="VP" children="VBZ,NP"/>
+        <grammar_non_terminal root="VP" children="VBZ,PP"/>
+        <grammar_non_terminal root="VP" children="VBZ,ADVP"/>
+        <grammar_non_terminal root="PP" children="IN,NP"/>
+        <grammar_non_terminal root="PP" children="TO,NP"/>
+        <grammar_non_terminal root="PP" children="PP,X0"/>
+        <grammar_non_terminal root="NP" children="NP,PP"/>
+        <grammar_non_terminal root="NP" children="DT,NN"/>
+        <grammar_non_terminal root="NP" children="DT,NNS"/>
+        <grammar_non_terminal root="NP" children="DT,X1"/>
+        <grammar_non_terminal root="NP" children="DT,X4"/>
+        <grammar_non_terminal root="NP" children="JJ,NN"/>
+        <grammar_non_terminal root="NP" children="JJ,NNS"/>
+        <grammar_non_terminal root="NP" children="NP,X0"/>
+        <grammar_non_terminal root="NP" children="NP,SBAR"/>
+        <grammar_non_terminal root="ADVP" children="RBS,PP"/>
+        <grammar_non_terminal root="ADVP" children="RP,NP"/>
+        <grammar_non_terminal root="X0" children="CC,NP"/>
+        <grammar_non_terminal root="X0" children="CC,PP"/>
+        <grammar_non_terminal root="X1" children="JJ,NN"/>
+        <grammar_non_terminal root="X1" children="JJ,X4"/>
+        <grammar_non_terminal root="X2" children="CC,VP"/>
+        <grammar_non_terminal root="X3" children="PRT,PP"/>
+        <grammar_non_terminal root="X3" children="ADVP,NP"/>
+        <grammar_non_terminal root="X3" children="ADVP,PP"/>
+        <grammar_non_terminal root="X3" children="NP,PP"/>
+        <grammar_non_terminal root="X4" children="NN,NN"/>
+        <grammar_unit_production type="S" symbol="VP"/>
+        <grammar_unit_production type="VP" symbol="VB"/>
+        <grammar_unit_production type="NP" symbol="NN"/>
+        <grammar_unit_production type="NP" symbol="EX"/>
+        <grammar_unit_production type="PRT" symbol="RP"/>
+        <grammar_unit_production type="ADVP" symbol="RB"/>
+        <grammar_unit_production type="WHNP" symbol="WDT"/>
+    </grammar>
+</root>
