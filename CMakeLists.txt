@@ -26,6 +26,15 @@ ExternalProject_Add(lcm
 #)
 
 
+# Adding rocbot as an external
+ExternalProject_Add(rocbot
+	DEPENDS
+	PREFIX rocbot
+	DOWNLOAD_COMMAND svn co http://www.cs.rochester.edu/repos/rail/software/rocbot rocbot
+	CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX} -DCMAKE_MODULE_PATH=${CMAKE_INSTALL_PREFIX}/share/cmake-${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}/Modules -DBUILD_DOCS:BOOL=${BUILD_DOCS}
+	BUILD_COMMAND ${MAKE}
+)
+
 # Adding h2sl as external (requires lbfgs and lcm)
 ExternalProject_Add(h2sl
 	# DEPENDS lcm lbfgs
@@ -35,4 +44,4 @@ ExternalProject_Add(h2sl
 	CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX} -DCMAKE_MODULE_PATH=${CMAKE_INSTALL_PREFIX}/share/cmake-${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}/Modules
 )
 
-# install(TARGETS)
+install(TARGETS)
